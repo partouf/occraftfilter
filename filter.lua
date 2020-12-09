@@ -18,7 +18,7 @@ end
 
 function transferRandomStuff(source, destination)
   for slot = 1, tp.getStackInSlot(source) do
-    local stack = tp.getStackInSlot(source);
+    local stack = tp.getStackInSlot(source, slot);
     if stack then
       if not (stack.name == "air") then
         local emptyslot = getEmptySlot(destination);
