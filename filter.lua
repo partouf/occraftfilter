@@ -23,7 +23,7 @@ function transferRandomStuff(source, destination)
       if not (stack.name == "air") then
         local emptyslot = getEmptySlot(destination);
         if (emptyslot > 0) then
-          tp.transferItem(1, destination);
+          tp.transferItem(source, 1, 10, destination, emptyslot);
         else
           print("no empty slots")
         end
